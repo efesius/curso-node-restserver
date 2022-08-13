@@ -18,6 +18,9 @@
         data-shape="rectangular" data-logo_alignment="left"></div>
     <button id="google_singnout">Singout</button>
     <script>
+        var url = ( window.location.hostname.includes('localhost'))
+            ? 'http://localhost:8081/api/auth/google'
+            : 'https://restserver-node-lfs.herokuapp.com/api/auth/google';
         function handleCredentialResponse(response) {
             // decodeJwtResponse() is a custom function defined by you
             // to decode the credential response.
