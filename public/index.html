@@ -26,7 +26,7 @@
             // to decode the credential response.
             //console.log(response.credential);
             const body = { id_token: response.credential };
-            fetch("http://localhost:8081/api/auth/google", {
+            fetch(url, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(body),
